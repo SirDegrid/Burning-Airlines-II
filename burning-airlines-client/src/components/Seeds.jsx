@@ -13,20 +13,17 @@ const Seeds = () => {
     // const [flights, setFlights] = useState([]);
     // const [reservations, setReservations] = useState([]);
 
-    const fetchSeeds = (serv) => {
-        axios(serv).then((response) => {
+    const fetchSeeds = () => {
+        axios(SERVER_USER).then((response) => {
             setSeeds(response.data);
             setTimeout(fetchSeeds, 4000);
         });
     };
 
-    useEffect(fetchSeeds(SERVER_AIRPLANE), []);
-    useEffect(fetchSeeds(SERVER_USER), []);
-    useEffect(fetchSeeds(SERVER_FLIGHT), []);
-    useEffect(fetchSeeds(SERVER_RESERVATION), []);
+    useEffect(fetchSeeds, []);
 
-    const saveSeed = (content, serv) => {
-        axios.post(serv, {content: content}).then((response) => {
+    const saveSeed = (content) => {
+        axios.post(SERVER_USER, {content: content}).then((response) => {
             setSeeds([...seeds, response.data]);
         });
     };
@@ -34,13 +31,7 @@ const Seeds = () => {
     return (
         <div>
             <h1>Seed data I hope</h1>
-            <SeedForm onSubmit={ saveSeed(SERVER_AIRPLANE) } />
-            <SeedList seeds={seeds} />
-            <SeedForm onSubmit={ saveSeed(SERVER_USER) } />
-            <SeedList seeds={seeds} />
-            <SeedForm onSubmit={ saveSeed(SERVER_FLIGHT) } />
-            <SeedList seeds={seeds} />
-            <SeedForm onSubmit={ saveSeed(SERVER_RESERVATION) } />
+            <SeedForm onSubmit={ saveSeed } />
             <SeedList seeds={seeds} />
         </div>
     );
@@ -56,24 +47,10 @@ const SeedForm = (props) => {
     }
 
     return (
-        <div>
-            <form onSubmit={_handleSubmit}>
-                <textarea onInput={_handleInput} value={content} required />
-                <input type="submit" value="User email" />
-            </form>
-            <form onSubmit={_handleSubmit}>
-                <textarea onInput={_handleInput} value={content} required />
-                <input type="submit" value="Airplane" />
-            </form>
-            <form onSubmit={_handleSubmit}>
-                <textarea onInput={_handleInput} value={content} required />
-                <input type="submit" value="Flight" />
-            </form>
-            <form onSubmit={_handleSubmit}>
-                <textarea onInput={_handleInput} value={content} required />
-                <input type="submit" value="Reservations" />
-            </form>
-        </div>
+        <form onSubmit={_handleSubmit}>
+            <textarea onInput={_handleInput} value={content} required />
+            <input type="submit" value="User email" />
+        </form>
     );
 }
 
