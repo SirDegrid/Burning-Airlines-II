@@ -16,6 +16,7 @@ const Seeds = () => {
     const fetchSeeds = () => {
         axios(SERVER_USER).then((response) => {
             setSeeds(response.data);
+            console.log(response.data);
             setTimeout(fetchSeeds, 4000);
         });
     };
@@ -23,7 +24,7 @@ const Seeds = () => {
     useEffect(fetchSeeds, []);
 
     const saveSeed = (content) => {
-        axios.post(SERVER_USER, {content: content}).then((response) => {
+        axios.post(SERVER_USER, {email: content}).then((response) => {
             setSeeds([...seeds, response.data]);
         });
     };
@@ -49,6 +50,7 @@ const SeedForm = (props) => {
     return (
         <form onSubmit={_handleSubmit}>
             <textarea onInput={_handleInput} value={content} required />
+            <textarea onInput={_handleInput} value={content} required />
             <input type="submit" value="User email" />
         </form>
     );
@@ -57,7 +59,7 @@ const SeedForm = (props) => {
 const SeedList = (props) => {
     return (
         <div>
-            { props.seeds.map((s) => <p key={s.id}>{s.content}</p>)}
+            { props.seeds.map((s) => <p key={s.id}>{s.email}</p>)}
         </div>
     );
 };
