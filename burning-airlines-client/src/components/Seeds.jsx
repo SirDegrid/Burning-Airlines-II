@@ -16,7 +16,7 @@ const Seeds = () => {
     const fetchSeeds = (serv) => {
         axios(serv).then((response) => {
             setSeeds(response.data);
-            setTimeout(fetchSeeds, 4000);
+            // setTimeout(fetchSeeds, 4000);
         });
     };
 
