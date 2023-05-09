@@ -449,3 +449,283 @@ puma (3.12.6) lib/puma/server.rb:476:in `process_client'
 puma (3.12.6) lib/puma/server.rb:334:in `block in run'
 puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
 >>>>>>> c755ad7a4b8631b296d159c75becef00f0db84f4
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:20:08 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:20:08 +1000
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (9.9ms)
+Completed 200 OK in 17ms (Views: 2.1ms | ActiveRecord: 9.3ms)
+
+
+  Rendered users/index.json.jbuilder (10.3ms)
+Completed 200 OK in 21ms (Views: 13.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:20:27 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:20:27 +1000
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.json.jbuilder (0.7ms)
+  ↳ app/views/users/index.json.jbuilder:1
+Completed 200 OK in 7ms (Views: 2.1ms | ActiveRecord: 0.4ms)
+
+
+  Rendered users/index.json.jbuilder (1.4ms)
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:21:17 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:21:17 +1000
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.json.jbuilder (7.0ms)
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (6.3ms)
+Completed 200 OK in 13ms (Views: 9.1ms | ActiveRecord: 2.0ms)
+
+
+Completed 200 OK in 12ms (Views: 9.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:21:38 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:21:38 +1000
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (2.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (4.7ms)
+Completed 200 OK in 17ms (Views: 9.3ms | ActiveRecord: 2.1ms)
+
+
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (5.3ms)
+Completed 200 OK in 24ms (Views: 13.5ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/airplanes/new" for 127.0.0.1 at 2023-05-09 17:21:58 +1000
+Processing by AirplanesController#new as HTML
+  Rendering airplanes/new.html.erb within layouts/application
+  Rendered airplanes/_form.html.erb (9.0ms)
+  Rendered airplanes/new.html.erb within layouts/application (23.5ms)
+Completed 200 OK in 197ms (Views: 176.1ms | ActiveRecord: 8.6ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:22:01 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:22:01 +1000
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (1.9ms)
+Completed 200 OK in 8ms (Views: 5.4ms | ActiveRecord: 0.7ms)
+
+
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (3.0ms)
+Completed 200 OK in 8ms (Views: 4.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:24:00 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:24:00 +1000
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (2.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+Completed 200 OK in 14ms (Views: 3.5ms | ActiveRecord: 1.4ms)
+
+
+  Rendered users/index.json.jbuilder (2.0ms)
+Completed 200 OK in 10ms (Views: 6.1ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:27:05 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:27:05 +1000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (2.9ms)
+  Rendered users/index.json.jbuilder (2.7ms)
+Completed 200 OK in 9ms (Views: 2.3ms | ActiveRecord: 2.3ms)
+
+
+Completed 200 OK in 7ms (Views: 3.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:28:50 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:28:50 +1000
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+Processing by UsersController#index as JSON
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (3.3ms)
+  Rendering users/index.json.jbuilder
+Completed 200 OK in 11ms (Views: 6.5ms | ActiveRecord: 0.8ms)
+
+
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (1.9ms)
+Completed 200 OK in 6ms (Views: 3.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:29:48 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:29:48 +1000
+  [1m[35m (2.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (4.3ms)
+  Rendered users/index.json.jbuilder (4.1ms)
+Completed 200 OK in 12ms (Views: 3.3ms | ActiveRecord: 3.5ms)
+
+
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:30:55 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:30:55 +1000
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.json.jbuilder (1.9ms)
+  ↳ app/views/users/index.json.jbuilder:1
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.0ms)
+
+
+  Rendered users/index.json.jbuilder (1.6ms)
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:30:56 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:30:56 +1000
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (3.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+Completed 200 OK in 8ms (Views: 4.7ms | ActiveRecord: 1.4ms)
+
+
+  Rendered users/index.json.jbuilder (1.9ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:37:52 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:37:52 +1000
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (4.8ms)
+  Rendered users/index.json.jbuilder (5.1ms)
+Completed 200 OK in 12ms (Views: 2.9ms | ActiveRecord: 4.2ms)
+
+
+Completed 200 OK in 10ms (Views: 5.4ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:42:04 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:42:04 +1000
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (1.9ms)
+  Rendered users/index.json.jbuilder (2.2ms)
+Completed 200 OK in 9ms (Views: 2.0ms | ActiveRecord: 1.4ms)
+
+
+Completed 200 OK in 7ms (Views: 3.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:42:44 +1000
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 17:42:44 +1000
+Processing by UsersController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendering users/index.json.jbuilder
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (2.0ms)
+Completed 200 OK in 6ms (Views: 2.9ms | ActiveRecord: 0.6ms)
+
+
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (2.1ms)
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 0.8ms)
+
+
