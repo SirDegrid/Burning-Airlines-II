@@ -252,3 +252,87 @@ Processing by AirplanesController#new as HTML
 Completed 200 OK in 27ms (Views: 25.0ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 16:50:42 +1000
+Started GET "/airplanes.json" for 127.0.0.1 at 2023-05-09 16:50:42 +1000
+Started GET "/flights.json" for 127.0.0.1 at 2023-05-09 16:50:42 +1000
+Started GET "/reservations.json" for 127.0.0.1 at 2023-05-09 16:50:42 +1000
+Started GET "/airplanes.json" for 127.0.0.1 at 2023-05-09 16:50:42 +1000
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+  ↳ /Users/maggie/.rvm/gems/ruby-2.7.8/gems/activerecord-5.2.8.1/lib/active_record/log_subscriber.rb:98
+Processing by FlightsController#index as JSON
+Processing by AirplanesController#index as JSON
+Processing by ReservationsController#index as JSON
+Processing by AirplanesController#index as JSON
+Processing by UsersController#index as JSON
+  Rendering flights/index.json.jbuilder
+  Rendering reservations/index.json.jbuilder
+  Rendering airplanes/index.json.jbuilder
+  Rendering users/index.json.jbuilder
+  Rendering airplanes/index.json.jbuilder
+  [1m[36mFlight Load (6.0ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  [1m[36mReservation Load (3.9ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/views/flights/index.json.jbuilder:1
+  ↳ app/views/reservations/index.json.jbuilder:1
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  [1m[36mAirplane Load (3.7ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.json.jbuilder:1
+  Rendered reservations/index.json.jbuilder (14.0ms)
+Completed 200 OK in 32ms (Views: 10.8ms | ActiveRecord: 8.5ms)
+
+
+  [1m[36mAirplane Load (10.8ms)[0m  [1m[34mSELECT "airplanes".* FROM "airplanes"[0m
+  ↳ app/views/airplanes/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (12.0ms)
+Completed 200 OK in 33ms (Views: 8.3ms | ActiveRecord: 10.0ms)
+
+
+  Rendered flights/index.json.jbuilder (20.4ms)
+Completed 200 OK in 40ms (Views: 5.9ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/reservations.json" for 127.0.0.1 at 2023-05-09 16:50:42 +1000
+Started GET "/flights.json" for 127.0.0.1 at 2023-05-09 16:50:42 +1000
+Processing by ReservationsController#index as JSON
+Processing by FlightsController#index as JSON
+  Rendering reservations/index.json.jbuilder
+  Rendering flights/index.json.jbuilder
+  [1m[36mReservation Load (1.5ms)[0m  [1m[34mSELECT "reservations".* FROM "reservations"[0m
+  ↳ app/views/reservations/index.json.jbuilder:1
+  Rendered reservations/index.json.jbuilder (3.5ms)
+  [1m[36mFlight Load (0.6ms)[0m  [1m[34mSELECT "flights".* FROM "flights"[0m
+  ↳ app/views/flights/index.json.jbuilder:1
+Completed 200 OK in 8ms (Views: 5.0ms | ActiveRecord: 1.5ms)
+
+
+  Rendered flights/index.json.jbuilder (1.7ms)
+Completed 200 OK in 8ms (Views: 3.5ms | ActiveRecord: 0.6ms)
+
+
+  Rendered airplanes/_airplane.json.jbuilder (0.6ms)
+  Rendered airplanes/_airplane.json.jbuilder (0.2ms)
+  Rendered airplanes/index.json.jbuilder (41.6ms)
+  Rendered airplanes/index.json.jbuilder (38.3ms)
+Completed 200 OK in 61ms (Views: 20.3ms | ActiveRecord: 24.0ms)
+
+
+Completed 200 OK in 60ms (Views: 11.8ms | ActiveRecord: 32.2ms)
+
+
+Started GET "/users.json" for 127.0.0.1 at 2023-05-09 16:50:42 +1000
+Processing by UsersController#index as JSON
+  Rendering users/index.json.jbuilder
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.json.jbuilder:1
+  Rendered users/index.json.jbuilder (2.9ms)
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 1.3ms)
+
+
