@@ -32,6 +32,12 @@ export default function Root() {
                 <a href={`/planes`}>Planes</a>
               </li>
               <li>
+                <a href={`/flights/new`}>New Flight</a>
+              </li>
+              <li>
+                <a href={`/users/new`}>New User</a>
+              </li>
+              <li>
                 <a href={`/users`}>Users</a>
               </li>
             </ul>

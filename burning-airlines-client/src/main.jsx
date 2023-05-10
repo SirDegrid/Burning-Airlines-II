@@ -8,7 +8,9 @@ import "./index.css";
 import Root from "./routes/root";
 import Planes from "./routes/Planes";
 import Users from "./routes/Users";
-import Seeds from "./components/Seeds";
+import CreatePlane from "./components/CreatePlane";
+import CreateFlight from "./components/CreateFlight";
+import CreateUser from "./components/CreateUser";
 
 
 const router = createBrowserRouter([
@@ -22,7 +24,15 @@ const router = createBrowserRouter([
   },
   {
     path: "planes/new",
-    element: <Seeds />
+    element: <CreatePlane />
+  },
+  {
+    path: "flights/new",
+    element: <CreateFlight />
+  },
+  {
+    path: "users/new",
+    element: <CreateUser />
   },
   {
     path: "users",
