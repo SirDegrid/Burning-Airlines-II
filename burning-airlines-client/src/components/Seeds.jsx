@@ -13,74 +13,64 @@ const Seeds = () => {
     // const [flights, setFlights] = useState([]);
     // const [reservations, setReservations] = useState([]);
 
-    const fetchSeeds = (serv) => {
-        axios(serv).then((response) => {
+    const fetchSeeds = () => {
+        axios(SERVER_AIRPLANE).then((response) => {
             setSeeds(response.data);
-            // setTimeout(fetchSeeds, 4000);
+            // console.log(response.data);
+            setTimeout(fetchSeeds, 10000);
         });
     };
 
-    useEffect(fetchSeeds(SERVER_AIRPLANE), []);
-    useEffect(fetchSeeds(SERVER_USER), []);
-    useEffect(fetchSeeds(SERVER_FLIGHT), []);
-    useEffect(fetchSeeds(SERVER_RESERVATION), []);
+    useEffect(fetchSeeds, []);
 
-    const saveSeed = (content, serv) => {
-        axios.post(serv, {content: content}).then((response) => {
+    const saveSeed = (content) => {
+        console.log(content);
+        axios.post(SERVER_AIRPLANE, {name: content[0], row: content[1], column: content[2]}).then((response) => {
+            console.log(response)
             setSeeds([...seeds, response.data]);
+        }).catch((error) => {
+            console.error(error);
         });
     };
 
     return (
         <div>
             <h1>Seed data I hope</h1>
-            <SeedForm onSubmit={ saveSeed(SERVER_AIRPLANE) } />
-            <SeedList seeds={seeds} />
-            <SeedForm onSubmit={ saveSeed(SERVER_USER) } />
-            <SeedList seeds={seeds} />
-            <SeedForm onSubmit={ saveSeed(SERVER_FLIGHT) } />
-            <SeedList seeds={seeds} />
-            <SeedForm onSubmit={ saveSeed(SERVER_RESERVATION) } />
+            <SeedForm onSubmit={ saveSeed } />
             <SeedList seeds={seeds} />
         </div>
     );
 };
 
 const SeedForm = (props) => {
-    const [content, setContent] = useState('');
-    const _handleInput = (e) => setContent(e.target.value);
+    const [name, setName] = useState('');
+    const [row, setRow] = useState('');
+    const [column, setColumn] = useState('');
+    const _handleInputN = (e) => setName(e.target.value);
+    const _handleInputR = (e) => setRow(e.target.value);
+    const _handleInputC = (e) => setColumn(e.target.value);
     const _handleSubmit = (e) => {
         e.preventDefault();
-        props.onSubmit(content);
-        setContent('');
+        props.onSubmit([name, row, column]);
+        setName('');
+        setRow('');
+        setColumn('');
     }
 
     return (
-        <div>
-            <form onSubmit={_handleSubmit}>
-                <textarea onInput={_handleInput} value={content} required />
-                <input type="submit" value="User email" />
-            </form>
-            <form onSubmit={_handleSubmit}>
-                <textarea onInput={_handleInput} value={content} required />
-                <input type="submit" value="Airplane" />
-            </form>
-            <form onSubmit={_handleSubmit}>
-                <textarea onInput={_handleInput} value={content} required />
-                <input type="submit" value="Flight" />
-            </form>
-            <form onSubmit={_handleSubmit}>
-                <textarea onInput={_handleInput} value={content} required />
-                <input type="submit" value="Reservations" />
-            </form>
-        </div>
+        <form onSubmit={_handleSubmit}>
+            <textarea onInput={_handleInputN} value={name} required />
+            <textarea onInput={_handleInputR} value={row} required />
+            <textarea onInput={_handleInputC} value={column} required />
+            <input type="submit" value="User email" />
+        </form>
     );
 }
 
 const SeedList = (props) => {
     return (
         <div>
-            { props.seeds.map((s) => <p key={s.id}>{s.content}</p>)}
+            { props.seeds.map((s) => <p key={s.id}>{s.name}, {s.row}, {s.column}</p>)}
         </div>
     );
 };

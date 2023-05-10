@@ -1,9 +1,12 @@
-import Seeds from './components/Seeds';
+import Users from "./routes/Users"
+import React from "react";
+import { Link } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <Seeds />
+      <Users />
+
     </div>
   );
 };
