@@ -14,18 +14,22 @@ const Seeds = () => {
     // const [reservations, setReservations] = useState([]);
 
     const fetchSeeds = () => {
-        axios(SERVER_USER).then((response) => {
+        axios(SERVER_AIRPLANE).then((response) => {
             setSeeds(response.data);
-            console.log(response.data);
-            setTimeout(fetchSeeds, 4000);
+            // console.log(response.data);
+            setTimeout(fetchSeeds, 10000);
         });
     };
 
     useEffect(fetchSeeds, []);
 
     const saveSeed = (content) => {
-        axios.post(SERVER_USER, {email: content}).then((response) => {
+        console.log(content);
+        axios.post(SERVER_AIRPLANE, {name: content[0], row: content[1], column: content[2]}).then((response) => {
+            console.log(response)
             setSeeds([...seeds, response.data]);
+        }).catch((error) => {
+            console.error(error);
         });
     };
 
@@ -39,18 +43,25 @@ const Seeds = () => {
 };
 
 const SeedForm = (props) => {
-    const [content, setContent] = useState('');
-    const _handleInput = (e) => setContent(e.target.value);
+    const [name, setName] = useState('');
+    const [row, setRow] = useState('');
+    const [column, setColumn] = useState('');
+    const _handleInputN = (e) => setName(e.target.value);
+    const _handleInputR = (e) => setRow(e.target.value);
+    const _handleInputC = (e) => setColumn(e.target.value);
     const _handleSubmit = (e) => {
         e.preventDefault();
-        props.onSubmit(content);
-        setContent('');
+        props.onSubmit([name, row, column]);
+        setName('');
+        setRow('');
+        setColumn('');
     }
 
     return (
         <form onSubmit={_handleSubmit}>
-            <textarea onInput={_handleInput} value={content} required />
-            <textarea onInput={_handleInput} value={content} required />
+            <textarea onInput={_handleInputN} value={name} required />
+            <textarea onInput={_handleInputR} value={row} required />
+            <textarea onInput={_handleInputC} value={column} required />
             <input type="submit" value="User email" />
         </form>
     );
@@ -59,7 +70,7 @@ const SeedForm = (props) => {
 const SeedList = (props) => {
     return (
         <div>
-            { props.seeds.map((s) => <p key={s.id}>{s.email}</p>)}
+            { props.seeds.map((s) => <p key={s.id}>{s.name}, {s.row}, {s.column}</p>)}
         </div>
     );
 };
