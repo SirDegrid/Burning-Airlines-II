@@ -29,7 +29,7 @@ const CreatePlanes = () => {
 
     return (
         <div>
-            <h1>Seed data I hope</h1>
+            <h2>Create Plane</h2>
             <PlaneForm onSubmit={ savePlane } />
             <PlaneList planes={planes} />
         </div>
@@ -52,14 +52,29 @@ const PlaneForm = (props) => {
     }
 
     return (
-        <form onSubmit={_handleSubmit}>
-            <textarea onInput={_handleInputN} value={name} required />
-            <textarea onInput={_handleInputR} value={row} required />
-            <textarea onInput={_handleInputC} value={column} required />
-            <input type="submit" value="Create Plane" />
-        </form>
+        <div class="form-container">
+            <form onSubmit={_handleSubmit}>
+                <div>
+                    <label htmlFor="name">Plane Name:</label>
+                    <input onInput={_handleInputN} value={name} required placeholder='Boeing 747'/>
+                </div>
+                <div>
+                    <label htmlFor="row">Row:</label>
+                    <input onInput={_handleInputR} value={row} required placeholder='12'/>
+                </div>
+                <div>
+                    <label htmlFor="column">Seat:</label>
+                    <input onInput={_handleInputC} value={column} required placeholder='E'/>
+                </div>
+                <div>
+                    <input type="submit" value="Create Plane" />
+                </div>
+            </form>
+        </div>
     );
 }
+
+// export 
 
 const PlaneList = (props) => {
     return (

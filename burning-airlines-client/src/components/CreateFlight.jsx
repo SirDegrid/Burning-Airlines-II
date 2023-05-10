@@ -28,7 +28,7 @@ const CreateFlight = () => {
 
     return (
         <div>
-            <h1>Seed data I hope</h1>
+            <h2>Create Flight</h2>
             <FlightForm onSubmit={ saveSeed } />
             <FlightList flights={flights} />
         </div>
@@ -51,12 +51,25 @@ const FlightForm = (props) => {
     }
 
     return (
-        <form onSubmit={_handleSubmit}>
-            <textarea onInput={_handleInputN} value={number} required />
-            <textarea onInput={_handleInputR} value={origin} required />
-            <textarea onInput={_handleInputC} value={destination} required />
-            <input type="submit" value="Create Flight" />
-        </form>
+        <div class="form-container">
+            <form onSubmit={_handleSubmit}>
+                <div>
+                    <label htmlFor="flight-number">Flight Number:</label>
+                    <input onInput={_handleInputN} value={number} required placeholder='234'/>
+                </div>
+                <div>
+                    <label htmlFor="origin">Origin:</label>
+                    <input onInput={_handleInputR} value={origin} required placeholder='Melbourne'/>
+                </div>
+                <div>
+                    <label htmlFor="destination">Destination:</label>
+                    <input onInput={_handleInputC} value={destination} required placeholder='Sydney'/>
+                </div>
+                <div>
+                <input type="submit" value="Create Flight" />
+                </div>
+            </form>
+        </div>
     );
 }
 

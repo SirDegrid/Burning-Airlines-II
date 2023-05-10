@@ -28,7 +28,7 @@ const CreateUser = () => {
 
     return (
         <div>
-            <h1>Seed data I hope</h1>
+            <h2>Create User</h2>
             <UserForm onSubmit={ saveUser } />
             <UserList users={users} />
         </div>
@@ -48,11 +48,21 @@ const UserForm = (props) => {
     }
 
     return (
-        <form onSubmit={_handleSubmit}>
-            <textarea onInput={_handleInputE} value={email} required />
-            <textarea onInput={_handleInputP} value={password} required />
-            <input type="submit" value="Create User" />
-        </form>
+        <div class="form-container">
+            <form onSubmit={_handleSubmit}>
+                <div>
+                    <label htmlFor="email">Email:</label>
+                    <input onInput={_handleInputE} placeholder="email@hotmail.com" value={email} required />
+                </div>
+                <div>
+                    <label htmlFor="password">Password:</label>
+                    <input onInput={_handleInputP} value={password} required placeholder="chicken"/>
+                </div>
+                <div>
+                    <input type="submit" value="Create User" />
+                </div>
+            </form>
+        </div>
     );
 }
 
