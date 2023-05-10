@@ -1,14 +1,9 @@
-import Users from "./routes/Users"
-import React from "react";
-import { Link } from "react-router-dom";
+// import Root from './routes/NavBar'
 
-function App() {
-  return (
-    <div>
-      <Users />
+// function App() {
+//   console.log(window.location);
+//   return <Root />
 
-    </div>
-  );
-};
+// };
 
-export default App;
+// export default App;

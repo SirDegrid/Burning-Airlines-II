@@ -1,8 +1,7 @@
 const Planes = () => {
     return (
         <div>
-            <h1>List of Planes</h1>
-            <a href="/planes/new">new plane</a>
+            <h1>Planes</h1>
         </div>
     );
 };
