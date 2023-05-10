@@ -1,5 +1,10 @@
 {
   "name": "burning-airlines-server",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4",
+    "popper.js": "^1.16.1",
+    "react-router-dom": "^6.11.1"
+  }
 }
