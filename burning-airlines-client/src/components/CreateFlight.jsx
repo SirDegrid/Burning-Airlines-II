@@ -51,7 +51,7 @@ const FlightForm = (props) => {
     }
 
     return (
-        <div class="form-container">
+        <div className="form-container">
             <form onSubmit={_handleSubmit}>
                 <div>
                     <label htmlFor="flight-number">Flight Number:</label>
