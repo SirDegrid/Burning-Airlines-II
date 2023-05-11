@@ -33,12 +33,23 @@ puts "#{Flight.count} flights"
 
 # associations
 #flight belongs to
+<<<<<<< HEAD
 # f1.airplane = a1
 # f2.airplane = a1
 # f3.airplane = a2
 # f4.airplane = a2
 # f5.airplane = a3
 # f6.airplane = a3
+=======
+# f1.airplane << a1 # the flight id should be added to airplane <<
+# f2.airplane << a1
+# f3.airplane << a2
+# f4.airplane << a2
+# f5.airplane << a3
+# f6.airplane << a3
+
+# a1.flights <<
+>>>>>>> 4ae0fb82e0ec9d78f56ae476033f28dbc7fc394c
 
 #airplane has many
 a1.flights << f1 << f2  #adding to the collection of a1

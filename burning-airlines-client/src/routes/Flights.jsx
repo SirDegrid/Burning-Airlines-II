@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-// import { CreateFlight } from '../components/CreateFlight';
+import { FlightList } from '../components/CreateFlight';
 import { useState, useEffect } from "react";
 import axios from 'axios';
 
@@ -22,7 +22,7 @@ const Flights = () => {
         <div>
             <h1>Flights</h1>
             <h1><Link to="/flights/create" className="create-link">Create Flight</Link></h1> 
-            {/* <FlightList flights={flights} /> */}
+            <FlightList flights={flights} />
 
         </div>
     );

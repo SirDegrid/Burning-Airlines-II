@@ -32,7 +32,7 @@ const CreatePlanes = () => {
         <div>
             <h2>Create Plane</h2>
             <PlaneForm onSubmit={ savePlane } />
-            <PlaneList planes={planes} />
+            {/* <PlaneList planes={planes} /> */}
         </div>
     );
 };
@@ -75,7 +75,7 @@ const PlaneForm = (props) => {
     );
 }
 
-const PlaneList = (props) => {
+export const PlaneList = (props) => {
     return (
         <div>
             { props.planes.map((s) => <p key={s.id}>{s.name}, {s.row}, {s.column}</p>)}
