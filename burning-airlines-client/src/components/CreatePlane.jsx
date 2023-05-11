@@ -78,7 +78,9 @@ const PlaneForm = (props) => {
 export const PlaneList = (props) => {
     return (
         <div>
-            { props.planes.map((s) => <p key={s.id}>{s.name}, {s.row}, {s.column}</p>)}
+            <ul>
+            { props.planes.map((s) => <li><a href={`planes/${s.id}`} key={s.id}>{s.name}, {s.row}, {s.column}</a></li>) }
+            </ul>
         </div>
     );
 };

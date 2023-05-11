@@ -16,7 +16,6 @@ import CreatePlane from "./components/CreatePlane";
 import CreateFlight from "./components/CreateFlight";
 import CreateUser from "./components/CreateUser";
 import CreateReservations from "./components/CreateReservations";
-import { useState } from "react";
 
 console.log("You are at the following location:", window.location);
 

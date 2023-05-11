@@ -76,7 +76,9 @@ const FlightForm = (props) => {
 export const FlightList = (props) => {
     return (
         <div>
-            { props.flights.map((s) => <p key={s.id}>{s.number}, {s.origin}, {s.destination}</p>)}
+            <ul> 
+            { props.flights.map((s) => <li><a href={`flights/${s.id}`} key={s.id}>{s.number}, {s.origin}, {s.destination}</a></li>)}
+            </ul>
         </div>
     );
 };

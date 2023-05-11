@@ -33,7 +33,6 @@ const CreateUser = () => {
         <div>
             <h2>Create User</h2>
             <UserForm onSubmit={ saveUser } />
-            <UserList users={users} />
         </div>
     );
 };
@@ -69,10 +68,12 @@ const UserForm = (props) => {
     );
 }
 
-const UserList = (props) => {
-    return (
+export const UserList = (props) => {
+    return ( 
         <div>
-            { props.users.map((s) => <p key={s.id}>{s.email}, {s.password}</p>)}
+            <ul>
+            { props.users.map((s) => <li><a href={`users/${s.id}`} key={s.id}>{s.email}, {s.password}</a></li>)}
+            </ul>
         </div>
     );
 };
