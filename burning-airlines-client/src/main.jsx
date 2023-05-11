@@ -16,12 +16,11 @@ import CreatePlane from "./components/CreatePlane";
 import CreateFlight from "./components/CreateFlight";
 import CreateUser from "./components/CreateUser";
 import CreateReservations from "./components/CreateReservations";
-
+import { useState } from "react";
 
 console.log("You are at the following location:", window.location);
 
 const router = createBrowserRouter([
-  
   {
     path: "/",
     element: <Root />,
@@ -50,6 +49,7 @@ const router = createBrowserRouter([
         path: "flights",
         element: <Flights />,
       },
+      
       {
         path: "flights/create",
         element: <CreateFlight />
@@ -64,27 +64,6 @@ const router = createBrowserRouter([
       },
     ]
   },
-
-  // {
-  //   path: "planes",
-  //   element: <Planes />,
-  // },
-  // {
-  //   path: "planes/new",
-  //   element: <CreatePlane />
-  // },
-  // {
-  //   path: "flights/new",
-  //   element: <CreateFlight />
-  // },
-  // {
-  //   path: "users/new",
-  //   element: <CreateUser />
-  // },
-  // {
-  //   path: "users",
-  //   element: <Users />,
-  // },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

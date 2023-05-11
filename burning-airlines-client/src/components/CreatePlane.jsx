@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
+
 const SERVER_AIRPLANE = 'http://localhost:3000/airplanes.json';
 const SERVER_RESERVATION = 'http://localhost:3000/reservations.json';
 
@@ -52,7 +53,7 @@ const PlaneForm = (props) => {
     }
 
     return (
-        <div class="form-container">
+        <div className="form-container">
             <form onSubmit={_handleSubmit}>
                 <div>
                     <label htmlFor="name">Plane Name:</label>
@@ -74,9 +75,7 @@ const PlaneForm = (props) => {
     );
 }
 
-// export 
-
-const PlaneList = (props) => {
+export const PlaneList = (props) => {
     return (
         <div>
             { props.planes.map((s) => <p key={s.id}>{s.name}, {s.row}, {s.column}</p>)}
