@@ -30,7 +30,7 @@ const CreateFlight = () => {
         <div>
             <h2>Create Flight</h2>
             <FlightForm onSubmit={ saveSeed } />
-            <FlightList flights={flights} />
+            {/* <FlightList flights={flights} /> */}
         </div>
     );
 };

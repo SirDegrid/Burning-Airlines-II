@@ -75,7 +75,7 @@ const PlaneForm = (props) => {
     );
 }
 
-export const PlaneList = (props) => {
+const PlaneList = (props) => {
     return (
         <div>
             { props.planes.map((s) => <p key={s.id}>{s.name}, {s.row}, {s.column}</p>)}
@@ -84,3 +84,4 @@ export const PlaneList = (props) => {
 };
 
 export default CreatePlanes;
+
